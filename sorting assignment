@@ -1,0 +1,27 @@
+What is the difference between in-place and out-place sorting algorithms?
+Ans: In-place means that the algorithm does not use extra space for manipulating the input but may require a small though non-constant extra space for its operation.
+     Usually, this space is O(log n), though sometimes anything in O(n) (Smaller than linear) is allowed.example: Bubble Sort 
+     Out-of-place Sorting: Sorting Algorithms that need extra memory while sorting. They typically create a new array/list into which the output is sorted.
+     In general, In-place sorting algorithms are the preferred type due to the lower memory requirements.example: merge sort
+Implement Insertion sort in both (in-place and out-place) manner.
+Ans: # Python program for implementation of Insertion Sort using in-place manner
+
+def insertionSort(arr):
+	for i in range(1, len(arr)):
+
+		key = arr[i]
+		j = i-1
+		while j >=0 and key < arr[j] :
+				arr[j+1] = arr[j]
+				j -= 1
+		arr[j+1] = key
+arr = [12, 11, 13, 5, 6]
+insertionSort(arr)
+lst = [] #empty list to store sorted elements
+print("Sorted array is : ")
+for i in range(len(arr)):
+	lst.append(arr[i])	 
+print(lst)
+
+Suggest some practical examples of using in-place and out-place techniques.
+Ans: practicle example of in-place technique while shoping on flipkart and of out-place is contact list in our phone.
